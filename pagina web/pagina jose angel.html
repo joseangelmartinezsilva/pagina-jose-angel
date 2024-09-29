@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Ángel Martínez Silva - Diseño Web Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f3f4f6;
+            font-size: 16px;
+        }
+
+        header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background: #ff7e29;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ff9f50;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        #sobre-mi {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .sobre-mi-content img {
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .descripcion {
+            max-width: 600px;
+        }
+
+        .descripcion p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+
+        #foda {
+            background: #eef;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        #foda h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0056b3;
+        }
+
+        .foda-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .foda-item {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .foda-item h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .foda-item ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #servicios {
+            background: #eef;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        #servicios h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0056b3;
+        }
+
+        .servicios-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .servicio {
+            background: #fff;
+            padding: 30px;
+            margin: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .servicio h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .servicio p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        #proyectos {
+            background: #eef;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #proyectos h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0056b3;
+        }
+
+        .proyectos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .proyecto {
+            background: #fff;
+            padding: 30px;
+            margin: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .proyecto img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .proyecto h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .proyecto p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Página de Inicio -->
+    <header>
+        <div class="header-content">
+            <h1>Diseño Web Profesional a tu Alcance</h1>
+            <p>Desarrollo de soluciones innovadoras y efectivas para impulsar tu presencia en línea y hacer crecer tu negocio.</p>
+            <a href="#servicios" class="cta-button">Explorar Servicios</a>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi">
+        <div class="sobre-mi-content">
+            <img src="tu-imagen.jpg" alt="José Ángel Martínez Silva">
+            <div class="descripcion">
+                <h2>Sobre Mí</h2>
+                <p>Soy José Ángel Martínez Silva, Ingeniero en Sistemas especializado en el desarrollo de sitios web profesionales. Con años de experiencia en diseño web, me dedico a crear soluciones personalizadas para adaptarse a las necesidades específicas de mis clientes.</p>
+                <blockquote>“José me ayudó a crear mi página web desde cero, ¡y ahora mi negocio ha crecido muchísimo!” - Cliente Satisfecho</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Análisis FODA -->
+    <section id="foda">
+        <h2>Análisis FODA</h2>
+        <div class="foda-grid">
+            <div class="foda-item">
+                <h3>Fortalezas</h3>
+                <ul>
+                    <li>Experiencia en desarrollo de sitios web personalizados.</li>
+                    <li>Conocimiento en optimización SEO y diseño responsivo.</li>
+                    <li>Compromiso con la calidad y atención a los detalles.</li>
+                </ul>
+            </div>
+            <div class="foda-item">
+                <h3>Oportunidades</h3>
+                <ul>
+                    <li>Creciente demanda de presencia en línea para empresas.</li>
+                    <li>Avances en tecnologías web que permiten crear sitios más eficientes.</li>
+                    <li>Potencial de expandir el portafolio con nuevos servicios.</li>
+                </ul>
+            </div>
+            <div class="foda-item">
+                <h3>Debilidades</h3>
+                <ul>
+                    <li>Recursos limitados para campañas de marketing iniciales.</li>
+                    <li>Falta de reconocimiento de marca en un mercado competitivo.</li>
+                </ul>
+            </div>
+            <div class="foda-item">
+                <h3>Amenazas</h3>
+                <ul>
+                    <li>Competencia creciente en el sector de diseño web.</li>
+                    <li>Cambios rápidos en tecnologías y tendencias.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="servicios-lista">
+            <div class="servicio">
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web personalizados, desde la planificación hasta la implementación.</p>
+            </div>
+            <div class="servicio">
+                <h3>Optimización SEO</h3>
+                <p>Mejora de la visibilidad de tu sitio web en motores de búsqueda para atraer más tráfico.</p>
+            </div>
+            <div class="servicio">
+                <h3>Diseño Responsivo</h3>
+                <p>Diseños que se adaptan a diferentes dispositivos y tamaños de pantalla para una mejor experiencia de usuario.</p>
+            </div>
+            <div class="servicio">
+                <h3>Consultoría</h3>
+                <p>Asesoramiento para mejorar tu estrategia digital y maximizar el rendimiento de tu sitio web.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyectos-lista">
+            <div class="proyecto">
+                <img src="img/Captura de pantalla 2024-09-28 222006.png" alt="Punto de Venta">
+                <h3>Punto de Venta</h3>
+                <p>Desarrollo de un sitio web de comercio electrónico para una tienda de moda. Incluye integración con sistemas de pago seguros y optimización SEO para mejorar la visibilidad del negocio.</p>
+            </div>
+            <div class="proyecto">
+                <img src="img/carrito.jpg" alt="Carrito de Compras para Pizzería">
+                <h3>Carrito de Compras para Pizzería</h3>
+                <p>Creación de un sitio web corporativo para una empresa de consultoría. Diseño moderno, compatible con dispositivos móviles y optimización de la experiencia del usuario.</p>
+            </div>
+            <div class="proyecto">
+                <img src="img/Captura de pantalla 2024-09-28 221427.png" alt="Gobierno Móvil">
+                <h3>Gobierno Móvil</h3>
+                <p>Portal de noticias diseñado para una organización de medios. El sitio incluye funcionalidades de gestión de contenidos y características interactivas para los usuarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 José Ángel Martínez Silva. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
